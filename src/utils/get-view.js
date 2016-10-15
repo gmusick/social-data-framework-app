@@ -32,7 +32,7 @@ function getModel(input, viewPath){
 }
 
 
-function syncModel(template, model, input, html, cb){
+function syncModel(template, model, input, html){
   var templateInput = model ? model(input) : input;
   templateInput._str = input._str;
 
@@ -62,7 +62,7 @@ function getView(template, input, cb) {
 
   //sync model
   if(model.length === 1){
-    return syncModel(template, model, input, html, cb);
+    return syncModel(template, model, input, html);
   //async model
   } else if(model.length === 2){
     asyncModel(template, model, input, html, cb);
