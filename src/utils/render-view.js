@@ -4,6 +4,8 @@ var mustache = require('mustache');
 var LANG_DEFAULT = 'en';
 
 //TODO: make this into SchemaFunction
+
+//TODO: Move this into get-view?  Why not just have langs asociate with views directly
 function setLangStrings(component, lang){
   var str = {};
 
@@ -24,19 +26,25 @@ function renderView(component, input, lang) {
   input._str = setLangStrings(component, lang);
 
   //make renderView available to all sub views
-  input.renderView = function(subComponent, subInput, cb){
-    subInput.renderView = input.renderView;
+  function renderView(subComponent, subInput, cb){
     if(cb){
-      getView(subComponent, subInput, cb);
+      getView(subComponent, buildViewInput(subInput), cb);
     } else {
-      return getView(subComponent, subInput);
+      return getView(subComponent, buildViewInput(subInput));
     }
   }
 
-  var renderedView = getView('system/_renderView', {
-    'nav' : getView('nav', input),
-    'view' : getView(component, input)
-  });
+  function buildViewInput(inputValue){
+    return {
+      renderView,
+      params: inputValue,
+    }
+  }
+
+  var renderedView = getView('system/renderView', buildViewInput({
+    nav : getView('nav', buildViewInput(input)),
+    view : getView(component, buildViewInput(input))
+  }));
 
   return renderedView;
 }

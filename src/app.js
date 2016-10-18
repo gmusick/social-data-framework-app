@@ -12,7 +12,7 @@ var app = express();
 app.engine('html', hogan);
 app.set('views', __dirname + '/views');
 app.set('view engine', 'html');
-app.set('layout', 'system/_layout');
+app.set('layout', 'system/layout');
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));

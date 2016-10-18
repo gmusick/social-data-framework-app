@@ -7,7 +7,7 @@ module.exports = {
     person_age : {
       type : 'integer',
       minimum : 0,
-      maximum : 150
+      maximum : 120
     },
     person_gender : {
       enum : [
