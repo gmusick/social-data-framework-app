@@ -5,6 +5,5 @@
   "input": "src/assets/css/**/*.css",
   "output": "src/assets/build/app.css",
   "local-plugins": true,
-  "watch": true,
   "use": ["autoprefixer"]
 }

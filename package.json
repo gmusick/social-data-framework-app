@@ -6,8 +6,9 @@
     "node": ">=6.8.0"
   },
   "scripts": {
-    "start": "node ./src/bin/www",
-    "dev": "postcss -c postcss.dev.json & nodemon ./src/bin/www"
+    "build": "postcss -c postcss.json",
+    "dev": "postcss -w -c postcss.json & nodemon ./src/bin/www",
+    "start": "node ./src/bin/www"
   },
   "dependencies": {
     "autoprefixer": "^6.5.1",
