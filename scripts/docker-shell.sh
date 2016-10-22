@@ -12,4 +12,4 @@ if [ $current_dir = "." ]; then
   cd ..
 fi
 
-docker build -t social-data-framework/app:latest .
+docker exec -i -t social-data-framework /bin/sh

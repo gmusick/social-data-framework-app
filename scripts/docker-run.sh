@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-which docker
+which docker &> /dev/null
 if [ $? != 0 ]; then
   echo "Docker not found. Please install Docker to continue: https://docs.docker.com/engine/installation"
   exit
@@ -15,8 +15,8 @@ fi
 
 running=$(docker ps -a -q -f name=social-data-framework)
 if [ ! -z $running ]; then
-  docker stop $running
-  docker rm $running
+  docker stop $running &> /dev/null
+  docker rm $running &> /dev/null
 fi
 
 app_dir=$(pwd)
@@ -24,5 +24,6 @@ app_dir=$(pwd)
 docker run -d \
            -p 3000:3000 \
            --name social-data-framework \
-           -v $app_dir/src:/usr/local/social-data-framework/src \
+           -v $app_dir:/usr/local/social-data-framework \
+           -v /usr/local/social-data-framework/node_modules \
            social-data-framework/app npm run dev
