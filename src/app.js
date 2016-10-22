@@ -19,7 +19,6 @@ app.set('layout', 'system/layout');
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(require('less-middleware')(path.join(__dirname, 'assets')));
-app.use(express.static(path.join(__dirname, 'assets')));
+app.use(express.static(path.join(__dirname, 'assets', 'build')));
 
 module.exports = app;
