@@ -21,7 +21,8 @@ fi
 
 app_dir=$(pwd)
 
-docker run -d \
+docker run -it \
+           --rm \
            -p 3000:3000 \
            --name social-data-framework \
            -v $app_dir:/usr/local/social-data-framework \
