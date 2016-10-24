@@ -11,18 +11,20 @@
     "start": "node ./src/bin/www"
   },
   "dependencies": {
-    "autoprefixer": "^6.5.1",
     "body-parser": "1.15.2",
     "express": "4.14.0",
     "hogan-express": "0.5.2",
     "lodash": "*",
     "morgan": "1.7.0",
     "mustache": "2.2.1",
-    "postcss-cli": "^2.6.0",
+    "normalize.css": "^5.0.0",
     "run-function-with-signature": "0.0.5",
     "serve-favicon": "2.3.0"
   },
   "devDependencies": {
-    "nodemon": "^1.11.0"
+    "autoprefixer": "^6.5.1",
+    "nodemon": "^1.11.0",
+    "postcss-cli": "^2.6.0",
+    "postcss-import": "^8.1.2"
   }
 }

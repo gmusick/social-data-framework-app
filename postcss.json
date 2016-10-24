@@ -2,8 +2,11 @@
   "autoprefixer": {
     "browsers": "> 1%, last 3 versions"
   },
-  "input": "src/assets/css/**/*.css",
+  "input": "src/assets/css/**/index.css",
   "output": "src/assets/build/app.css",
+  "postcss-import": {
+    "from": "src/assets/css/index.css"
+  },
   "local-plugins": true,
-  "use": ["autoprefixer"]
+  "use": ["postcss-import", "autoprefixer"]
 }
