@@ -4,12 +4,9 @@ module.exports = {
       test: { type: 'string' }
     }
   },
-  model: (input, cb) => {
-    //input.params
-    //input.renderView
-    
+  model: (input) => {
     return {
-      'test' : 'value'
+      'test': 'value'
     }
   }
 };

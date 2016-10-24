@@ -26,7 +26,7 @@ function getModel(viewPath){
 
     var schemaWithProperties = schema && schema.properties ? schema : { properties: {} };
     schemaWithProperties.properties._str = { type: 'object' };
-    
+
     return schemaWithProperties;
   }
 
@@ -34,7 +34,7 @@ function getModel(viewPath){
     var validatedInputSchema = ensureSchemaProperties(model.inputSchema, 'input');
 
     return {
-      model: (model.model === 'function') ? model.model : (input) => {
+      model: (typeof model.model === 'function') ? model.model : (input) => {
         return input;
       },
       inputSchema: validatedInputSchema,
@@ -51,13 +51,13 @@ function getModel(viewPath){
 }
 
 function syncModel(template, model, input, html){
-  var schemaFunction = new SchemaFunction(`views/${template}.js`, { 
+  var schemaFunction = new SchemaFunction(`views/${template}.js`, {
     func: model.model,
     input: input,
     inputSchema: model.inputSchema,
     outputSchema: model.outputSchema
   });
-  
+
   var modelOutput = schemaFunction.run();
   modelOutput._str = input._str;
 
@@ -70,7 +70,7 @@ function syncModel(template, model, input, html){
 
 function asyncModel(template, model, input, html, cb){
   throw new Error('asyncModel is out of date');
-  
+
   model(input, function(err, d){
     if(err){
       cb(err);
