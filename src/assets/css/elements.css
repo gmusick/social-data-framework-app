@@ -1,0 +1,35 @@
+.primary-header {
+  color: #e7bd21;
+  font-size: 9em;
+}
+
+.secondary-header {
+  color: #8f8f8f;
+  font-size: 4em;
+  font-weight: normal;
+}
+
+.tertiary-header {
+  color: #bbb;
+  font-weight: normal;
+}
+
+.body-copy {
+  font-size: 4em;
+  line-height: 1.5;
+}
+
+@media (min-width: 1024px) {
+  .primary-header {
+    color: #ffd22d;
+    font-size: 39em;
+  }
+
+  .secondary-header {
+    font-size: 15em;
+  }
+
+  .body-copy {
+    font-size: 6em;
+  }
+}
