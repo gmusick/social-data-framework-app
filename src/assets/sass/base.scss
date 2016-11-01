@@ -3,8 +3,8 @@ html {
 }
 
 body {
-  color: #666;
-  font-size: 4px;
+  color: $body-copy-color;
+  font-size: #{$default-font-size}px;
 }
 
 a {
