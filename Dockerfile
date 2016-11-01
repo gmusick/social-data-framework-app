@@ -1,4 +1,4 @@
-FROM mhart/alpine-node
+FROM node:7.0.0
 
 WORKDIR /usr/local/social-data-framework
 

@@ -6,8 +6,7 @@
     "node": ">=6.8.0"
   },
   "scripts": {
-    "build": "postcss -c postcss.json",
-    "dev": "postcss -w -c postcss.json & nodemon ./src/bin/www",
+    "dev": "nodemon ./src/bin/www",
     "start": "node ./src/bin/www"
   },
   "dependencies": {
@@ -17,7 +16,9 @@
     "lodash": "*",
     "morgan": "1.7.0",
     "mustache": "2.2.1",
+    "node-sass-middleware": "^0.9.8",
     "normalize.css": "^5.0.0",
+    "postcss-middleware": "^1.1.2",
     "run-function-with-signature": "0.0.5",
     "serve-favicon": "2.3.0"
   },
@@ -28,8 +29,6 @@
     "eslint-plugin-import": "^1.16.0",
     "eslint-plugin-jsx-a11y": "^2.2.3",
     "eslint-plugin-react": "^6.4.1",
-    "nodemon": "^1.11.0",
-    "postcss-cli": "^2.6.0",
-    "postcss-import": "^8.1.2"
+    "nodemon": "^1.11.0"
   }
 }
