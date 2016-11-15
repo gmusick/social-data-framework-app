@@ -1,0 +1,22 @@
+html {
+  font-family: Helvetica, sans-serif;
+}
+
+body {
+  color: $body-copy-color;
+  font-size: #{$default-font-size}px;
+}
+
+a {
+  background-color: #fff;
+  border-bottom: 1px dotted transparent;
+  border-bottom-color: inherit;
+  color: inherit;
+  padding-bottom: 0.1em;
+  text-decoration: none;
+  transition: background-color 0.2s ease-out;
+}
+
+a:hover {
+  background-color: rgba(255,210,45,0.25);
+}

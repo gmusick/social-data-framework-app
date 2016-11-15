@@ -1,0 +1,35 @@
+.primary-header {
+  color: $accent-color-darkened;
+  font-size: px-to-em(36);
+}
+
+.secondary-header {
+  color: $secondary-header-color;
+  font-size: px-to-em(16);
+  font-weight: normal;
+}
+
+.tertiary-header {
+  color: $tertiary-header-color;
+  font-weight: normal;
+}
+
+.body-copy {
+  font-size: px-to-em(16);
+  line-height: 1.5;
+}
+
+@media (min-width: $min-width-desktop) {
+  .primary-header {
+    color: $accent-color;
+    font-size: px-to-em(156);
+  }
+
+  .secondary-header {
+    font-size: px-to-em(60);
+  }
+
+  .body-copy {
+    font-size: px-to-em(24);
+  }
+}
