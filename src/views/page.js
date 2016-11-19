@@ -1,12 +1,12 @@
 module.exports = {
   outputSchema: {
     properties: {
-      test: { type: 'string' }
-    }
+      view: { type: 'string' },
+    },
   },
   model: (input) => {
     return {
-      'test': 'value'
-    }
-  }
+      view: input._str.component,
+    };
+  },
 };

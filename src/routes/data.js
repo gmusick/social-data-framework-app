@@ -1,9 +1,9 @@
 const router = require('express').Router();
 const renderView = require('../utils/render-view');
 
-router.route('/about').get((req, res) => {
+router.route('/data').get((req, res) => {
   res.render('page', {
-    content: renderView('about', {}),
+    content: renderView('data', {}),
   });
 });
 

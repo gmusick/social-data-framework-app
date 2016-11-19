@@ -47,7 +47,8 @@ function setupServer() {
 
   // routes
   app.use('/', require('../routes/home'));
-  app.use('/', require('../routes/about'));
+  app.use('/', require('../routes/data'));
+  app.use('/', require('../routes/act'));
 
   http.createServer(app).listen(app.get('port'));
 }
