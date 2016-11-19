@@ -34,7 +34,7 @@ function renderView(component, input, lang) {
     }
   }
 
-  function buildViewInput(inputValue){
+  function buildViewInput(inputValue) {
     return {
       renderView,
       params: inputValue,
@@ -42,8 +42,9 @@ function renderView(component, input, lang) {
   }
 
   var renderedView = getView('system/renderView', buildViewInput({
-    nav : getView('nav', buildViewInput(input)),
-    view : getView(component, buildViewInput(input))
+    component,
+    nav: getView('nav', buildViewInput(input)),
+    view: getView(component, buildViewInput(input)),
   }));
 
   return renderedView;
