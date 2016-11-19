@@ -1,0 +1,40 @@
+.nav__links {
+  list-style: none;
+  margin: 0;
+  overflow: auto;
+  padding: 0;
+}
+
+.nav__link {
+  border: 1px solid $border-color;
+  border-left: 0;
+  float: left;
+  margin: 0;
+  text-align: center;
+  width: 33%;
+
+  &:first-child {
+    border-left: 1px solid $border-color;
+  }
+
+  a {
+    border-bottom: 4px solid transparent;
+    display: block;
+    padding: px-to-em(14);
+    padding-bottom: px-to-em(10);
+    text-decoration: none;
+  }
+}
+
+.home .nav__link--home, .data .nav__link--data, .act .nav__link--act {
+  border-bottom: 0;
+
+  a {
+    border-bottom: 4px solid $accent-color-darkened;
+    padding-bottom: px-to-em(11);
+
+    @media (min-width: $min-width-desktop) {
+      border-color: $accent-color;
+    }
+  }
+}
