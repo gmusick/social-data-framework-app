@@ -1,34 +1,90 @@
 .primary-header {
-  color: $accent-color-darkened;
-  font-size: px-to-em(36);
+  color: $accent-color;
+  font-size: px-to-em(40);
+  font-weight: 700;
+  line-height: px-to-em(20);
 }
 
 .secondary-header {
-  color: $secondary-header-color;
-  font-size: px-to-em(16);
-  font-weight: normal;
+  font-size: px-to-em(20);
+  font-weight: 100;
+  line-height: px-to-em(20);
 }
 
 .tertiary-header {
-  color: $tertiary-header-color;
-  font-weight: normal;
+  @extend .body-copy;
+  text-decoration: underline;
 }
 
 .body-copy {
-  font-size: px-to-em(16);
+  font-size: px-to-em(15);
+  font-weight: 300;
+  line-height: px-to-em(21);
+}
+
+.caption {
+  font-family: $monospace;
+  font-size: px-to-em(12);
+  line-height: px-to-em(20);
+}
+
+@media (min-width: $min-width-tablet) {
+  .primary-header {
+    color: $accent-color;
+    font-size: px-to-em(120);
+    line-height: px-to-em(15);
+  }
+
+  .secondary-header {
+    font-size: px-to-em(40);
+    line-height: px-to-em(20);
+  }
+
+  .body-copy {
+    font-size: px-to-em(20);
+    line-height: px-to-em(21);
+  }
 }
 
 @media (min-width: $min-width-desktop) {
   .primary-header {
     color: $accent-color;
-    font-size: px-to-em(156);
+    font-size: px-to-em(160);
+    letter-spacing: px-to-em(-0.5);
+    line-height: px-to-em(18);
   }
 
   .secondary-header {
     font-size: px-to-em(60);
+    line-height: px-to-em(20);
   }
 
   .body-copy {
-    font-size: px-to-em(24);
+    font-size: px-to-em(25);
+    line-height: px-to-em(21);
+  }
+
+  .caption {
+    font-size: px-to-em(16);
+    line-height: px-to-em(24);
+  }
+}
+
+@media (min-width: $min-width-desktop-hd) {
+  .primary-header {
+    color: $accent-color;
+    font-size: px-to-em(200);
+    letter-spacing: px-to-em(-0.75);
+    line-height: px-to-em(20);
+  }
+
+  .secondary-header {
+    font-size: px-to-em(80);
+    line-height: px-to-em(20);
+  }
+
+  .body-copy {
+    font-size: px-to-em(30);
+    line-height: px-to-em(24);
   }
 }
