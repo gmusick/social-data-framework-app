@@ -1,12 +1,13 @@
 .primary-header {
   color: $accent-color-darkened;
   font-size: px-to-em(36);
+  font-weight: 700;
 }
 
 .secondary-header {
   color: $secondary-header-color;
   font-size: px-to-em(16);
-  font-weight: normal;
+  font-weight: 100;
 }
 
 .tertiary-header {
