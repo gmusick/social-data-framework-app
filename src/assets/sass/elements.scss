@@ -1,35 +1,52 @@
 .primary-header {
-  color: $accent-color-darkened;
-  font-size: px-to-em(36);
+  color: $accent-color;
+  font-size: px-to-em(48);
   font-weight: 700;
+  line-height: px-to-em(16)
 }
 
 .secondary-header {
-  color: $secondary-header-color;
-  font-size: px-to-em(16);
+  font-size: px-to-em(21);
   font-weight: 100;
+  line-height: px-to-em(24);
 }
 
 .tertiary-header {
-  color: $tertiary-header-color;
-  font-weight: normal;
+  @extend .body-copy;
+  text-decoration: underline;
 }
 
 .body-copy {
   font-size: px-to-em(16);
+  font-weight: 300;
+  line-height: px-to-em(22);
+}
+
+.caption {
+  font-family: $monospace;
+  font-size: px-to-em(12);
+  line-height: px-to-em(24);
 }
 
 @media (min-width: $min-width-desktop) {
   .primary-header {
     color: $accent-color;
-    font-size: px-to-em(156);
+    font-size: px-to-em(160);
+    line-height: px-to-em(16)
   }
 
   .secondary-header {
     font-size: px-to-em(60);
+    line-height: px-to-em(21);
   }
 
   .body-copy {
-    font-size: px-to-em(24);
+    font-size: px-to-em(28);
+    line-height: px-to-em(24);
+  }
+
+  .caption {
+    font-size: px-to-em(16);
+    line-height: px-to-em(24);
   }
 }

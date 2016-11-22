@@ -30,7 +30,7 @@
   border-bottom: 0;
 
   a {
-    border-bottom: 4px solid $accent-color-darkened;
+    border-bottom: 4px solid $accent-color;
     padding-bottom: px-to-em(11);
 
     @media (min-width: $min-width-desktop) {
